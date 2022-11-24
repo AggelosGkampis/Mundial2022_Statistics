@@ -16,7 +16,7 @@ namespace Entities
         public double Rating { get; set; } 
 
         public string PhotoUrl { get; set; }
-        [Range(11,28)]
+        [Range(0,28)]
         public int SquadSize { get; set; }  
 
         // Navigation Properties

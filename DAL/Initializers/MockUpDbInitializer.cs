@@ -57,7 +57,7 @@ namespace DAL.Initializers
                 SquadSize = 26,
                 PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/189.png?lm=1520611569"
             };
-            t1.Players = new List<Player>() { p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11 };
+            t1.Players = new List<Player>() { p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11 };            
             Team t2 = new Team()
             {
                 Name = "Brazil",
@@ -152,7 +152,9 @@ namespace DAL.Initializers
             c2.Team = t2;
             Coach c3 = new Coach() { Name = "Didier Deschamps", BirthDate = new DateTime(1968, 10, 15), ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/1229-1564582636.jpg?lm=1" };      
             c3.Team = t3;
-
+            t1.Coach=c1; 
+            t2.Coach=c2; 
+            t3.Coach=c3; 
             
             
             #endregion
@@ -184,9 +186,9 @@ namespace DAL.Initializers
             //t2.Players.Add(p21);
             //t2.Players.Add(p22);
             //t2.Players.Add(p23);
-            context.Teams.AddOrUpdate(t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12);
-            context.Coaches.AddOrUpdate(c1, c2, c3);
-            context.Players.AddOrUpdate(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23);
+            context.Teams.AddOrUpdate(t=>t.Id,t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12);
+            context.Coaches.AddOrUpdate(c => c.Name, c1, c2, c3);
+            context.Players.AddOrUpdate(t => t.Name, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23);
             context.SaveChanges();
 
 

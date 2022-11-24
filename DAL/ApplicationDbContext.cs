@@ -9,20 +9,20 @@ using Entities;
 
 namespace DAL
 {
-    public class ApplicationDbContext : DbContext   
+    public class ApplicationDbContext : DbContext
     {
 
-        public ApplicationDbContext() :base("Sindesmos")
+        public ApplicationDbContext() : base("Sindesmos")
         {
             Database.SetInitializer<ApplicationDbContext>(new MockUpDbInitializer());
-            Database.Initialize(false);
+            Database.Initialize(true);
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             // Configure Team & Coach entity
             modelBuilder.Entity<Team>()
-                        .HasOptional(s => s.Coach) // Mark Coach property optional in Team entity
-                        .WithRequired(ad => ad.Team); // mark Team property as required in Coach entity. Cannot save Coach without Team
+                       .HasOptional(s => s.Coach) // Mark Coach property optional in Team entity
+                         .WithRequired(ad => ad.Team); // mark Team property as required in Coach entity. Cannot save Coach without Team          
         }
 
         public DbSet<Team> Teams { get; set; }

@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 namespace Entities
 {
     public class Coach
-    {
-        public int CoachId { get; set; }
-
+    {        
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public DateTime BirthDate { get; set; }
@@ -29,6 +28,7 @@ namespace Entities
 
         // Navigation Properties
         public Team Team { get; set; }
+
 
     }
 }
