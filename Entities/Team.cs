@@ -16,12 +16,12 @@ namespace Entities
         public double Rating { get; set; } 
 
         public string PhotoUrl { get; set; }
-        [Range(11,25)]
+        [Range(11,28)]
         public int SquadSize { get; set; }  
 
         // Navigation Properties
 
-        public virtual ICollection<Player> Players { get; set; }
+        public virtual List<Player> Players { get; set; }  // ICollection
 
         public Coach Coach { get; set; }
     }
