@@ -19,6 +19,8 @@ namespace Entities
 
         public Position Position { get; set; }
 
+        public bool IsCaptain { get; set; }
+
         public string ImageUrl { get; set; }
 
         [NotMapped]

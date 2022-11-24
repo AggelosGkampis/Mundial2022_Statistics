@@ -13,6 +13,7 @@ namespace Entities.Enums
         CB,
         RB,
         LM,
+        DM,
         CM,
         RM,
         LW,
