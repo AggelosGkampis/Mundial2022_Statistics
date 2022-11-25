@@ -16,6 +16,24 @@ namespace Experiments
     {
         static void Main(string[] args)
         {
+            ApplicationDbContext db = new ApplicationDbContext();
+
+            UnitOfWork unit = new UnitOfWork(db);
+
+            var teams = unit.Teams.GetTeamsOrderByDescending();
+
+            foreach (var team in teams)
+            {
+                Console.WriteLine(team.Name);
+            }
+
+
+
+
+
+
+
+
            //ApplicationDbContext db = new ApplicationDbContext();
 
            // TeamRepository teamRepository = new TeamRepository(db);

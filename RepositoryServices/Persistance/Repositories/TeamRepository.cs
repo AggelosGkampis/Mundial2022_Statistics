@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RepositoryServices
+namespace RepositoryServices.Persistance.Repositories
 {
     public class TeamRepository : GenericRepository<Team>, ITeamRepository
     {
