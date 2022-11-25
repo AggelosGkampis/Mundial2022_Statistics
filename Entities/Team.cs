@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Entities
 {
-    public class Team
+    public class Team : MundialEntity
     {
         public int Id { get; set; }
         [Required(ErrorMessage ="Team name is mandatory"),MaxLength(60),MinLength(2)]

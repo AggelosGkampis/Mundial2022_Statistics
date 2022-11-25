@@ -1,15 +1,17 @@
 ﻿using DAL;
+using Entities;
 using RepositoryServices.Core;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace RepositoryServices.Persistance
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : class
+    public class GenericRepository<T> : IGenericRepository<T> where T : MundialEntity
     {
         public ApplicationDbContext db;
         public DbSet<T> table;
@@ -51,6 +53,16 @@ namespace RepositoryServices.Persistance
         public void Save()
         {
             db.SaveChanges();
+        }
+
+        public IEnumerable<T> Find(Expression<Func<T,bool>> predicate)
+        {
+            return table.Where(predicate);
+        }
+
+        public T SingleOrDefault(Expression<Func<T, bool>> predicate)
+        {
+            return table.SingleOrDefault(predicate);
         }
     }
 }
