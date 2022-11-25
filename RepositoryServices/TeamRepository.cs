@@ -1,5 +1,7 @@
 ﻿using DAL;
 using Entities;
+using RepositoryServices.Core.Repositories;
+using RepositoryServices.Persistance;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,43 +10,22 @@ using System.Threading.Tasks;
 
 namespace RepositoryServices
 {
-    public class TeamRepository
+    public class TeamRepository : GenericRepository<Team>, ITeamRepository
     {
-        ApplicationDbContext db;
-
-        public TeamRepository(ApplicationDbContext context)
+       
+        public TeamRepository(ApplicationDbContext context) : base (context)
         {
-            db = context;
+           
         }
 
-        public List<Team> GetAll()
+        public IEnumerable<Team> GetTeamsOrderByAscending()
         {
-            throw new NotImplementedException();    
+            return table.OrderBy(x => x.Name).ToList();
         }
 
-        public Team GetById(int id)
+        public IEnumerable<Team> GetTeamsOrderByDescending()
         {
-            throw new NotImplementedException();
-        }
-
-        public void Insert(Team team)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Team team)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(Team team)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Save()
-        {
-            db.SaveChanges();
+            return table.OrderByDescending(x => x.Name).ToList();
         }
     }
 }

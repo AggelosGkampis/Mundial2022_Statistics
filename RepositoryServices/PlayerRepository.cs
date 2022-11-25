@@ -1,5 +1,9 @@
 ﻿using DAL;
 using Entities;
+using Entities.Enums;
+using RepositoryServices.Core;
+using RepositoryServices.Core.Repositories;
+using RepositoryServices.Persistance;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,43 +12,16 @@ using System.Threading.Tasks;
 
 namespace RepositoryServices
 {
-    public class PlayerRepository
+    public class PlayerRepository : GenericRepository<Player>, IPlayerRepository
     {
-        ApplicationDbContext db;
-
-        public PlayerRepository(ApplicationDbContext context)
+        public PlayerRepository(ApplicationDbContext context) : base(context)
         {
-            db = context;
+
         }
 
-        public List<Player> GetAll()
+        public IEnumerable<Player> GetAllPlayersByPosition()
         {
-            throw new NotImplementedException();    
-        }
-
-        public Player GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Insert(Player player)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Player player)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(Player player)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Save()
-        {
-            db.SaveChanges();
+            return table.OrderBy(p => p.Position).ToList();            
         }
     }
 }
