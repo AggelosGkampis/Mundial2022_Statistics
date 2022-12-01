@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entities
 {
-    public class Player
+    public class Player : MundialEntity
     {
         public int PlayerId { get; set; }
 
