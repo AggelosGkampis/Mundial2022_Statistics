@@ -11,5 +11,7 @@ namespace RepositoryServices.Core.Repositories
     public interface IPlayerRepository : IGenericRepository<Player>
     {
         IEnumerable<Player> GetAllPlayersByPosition();
+
+        IQueryable<IGrouping<Position, Player>> GetAllPlayersGroupedByPosition();
     }
 }

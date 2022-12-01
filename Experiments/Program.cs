@@ -20,19 +20,32 @@ namespace Experiments
 
             UnitOfWork unit = new UnitOfWork(db);
 
-            var teams = unit.Teams.GetTeamsOrderByDescending();
+            //var teams = unit.Teams.GetTeamsOrderByDescending();
 
-            foreach (var team in teams)
+            //foreach (var team in teams)
+            //{
+            //    Console.WriteLine(team.Name);
+            //}
+
+
+
+            var groups = unit.Players.GetAllPlayersGroupedByPosition();
+
+            foreach (var group in groups)
             {
-                Console.WriteLine(team.Name);
+                Console.WriteLine($"{group.Key,15}: {group.Count()}");
+                
             }
 
+            foreach (var group in groups)
+            {
+                Console.WriteLine($"{group.Key,10}");
+                foreach (var player in group)
+                {
+                    Console.WriteLine($"{"",15}:{player.Name}");
 
-
-
-
-
-
+                }
+            }
 
            //ApplicationDbContext db = new ApplicationDbContext();
 

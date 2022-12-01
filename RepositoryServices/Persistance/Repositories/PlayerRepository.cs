@@ -21,7 +21,16 @@ namespace RepositoryServices.Persistance.Repositories
 
         public IEnumerable<Player> GetAllPlayersByPosition()
         {
-            return table.OrderBy(p => p.Position).ToList();            
+            return table.OrderBy(p => p.Position).ToList();
+        }
+
+        public IQueryable<IGrouping<Position, Player>> GetAllPlayersGroupedByPosition()
+        {
+            var groups = from player in table
+                         group player by player.Position into lista
+                         select lista;
+
+            return groups;
         }
     }
 }
