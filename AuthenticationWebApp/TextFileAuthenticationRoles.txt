@@ -1,0 +1,6 @@
+﻿1. Decorator [Authorize] για να δώσω πρόσβαση μόνο σε εγγεγραμμένους χρήστες
+2. Decorator [AllowAnonymous] για να δώσω πρόσβαση μόνο σε όλους τους χρήστες
+3. Decorator [Authorize( Users="mplampla,mplampla2" ) ] για να δώσω πρόσβαση μόνο σε συγκεκριμένους χρήστες
+4. Περνάω χεράτα στο database roles σε κάποιους εγγεγραμμένους χρήστες στους πίνακες AspNetRoles-AspNetUserRoles-AspNetUsers
+5. if (User.IsInRole("Admin")) Μπορώ και με αυτό τον τρόπο να περάσω δυνατότητες σε ρόλους.
+5. if (User.Identity.IsAuthenticated) Μπορώ και με αυτό τον τρόπο να περάσω δυνατότητες σε εγγεγραμμένους.
