@@ -22,7 +22,7 @@ namespace AuthenticationWebApp.Models
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
-    {
+    { 
         public ApplicationDbContext()
             : base("Sindesmos", throwIfV1Schema: false)
         {

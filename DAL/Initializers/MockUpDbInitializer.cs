@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace DAL.Initializers
 {
-    internal class MockUpDbInitializer : DropCreateDatabaseAlways<ApplicationDbContext>
+    internal class MockUpDbInitializer :  DropCreateDatabaseAlways<ApplicationDbContext> //CreateDatabaseIfNotExists<ApplicationDbContext>
     {
         protected override void Seed(ApplicationDbContext context)
         {
@@ -154,9 +154,19 @@ namespace DAL.Initializers
             c3.Team = t3;
             t1.Coach=c1; 
             t2.Coach=c2; 
-            t3.Coach=c3; 
-            
-            
+            t3.Coach=c3;
+
+
+            #endregion
+
+
+            #region UserFavPlayer Seeding
+            UserFavPlayers user1 = new UserFavPlayers() { PlayerId= 1 , UserId = "57741483-0730-4bf9-827c-7095bb52fb10", PlayerChose = new DateTime(2022,10,10)};
+            UserFavPlayers user2 = new UserFavPlayers() { PlayerId= 5 , UserId = "57741483-0730-4bf9-827c-7095bb52fb10", PlayerChose = new DateTime(2022,10,11)};
+            UserFavPlayers user3 = new UserFavPlayers() { PlayerId= 12 , UserId = "57741483-0730-4bf9-827c-7095bb52fb10", PlayerChose = new DateTime(2022,10,12)};
+            UserFavPlayers user4 = new UserFavPlayers() { PlayerId= 25 , UserId = "d61a6d64-6329-4d1b-a4b1-6326d8ab6e73", PlayerChose = new DateTime(2022,5,10)};
+            UserFavPlayers user5 = new UserFavPlayers() { PlayerId= 7 , UserId = "d61a6d64-6329-4d1b-a4b1-6326d8ab6e73", PlayerChose = new DateTime(2022,6,10)};
+
             #endregion
 
             #region Relations Between Entities
@@ -186,6 +196,7 @@ namespace DAL.Initializers
             //t2.Players.Add(p21);
             //t2.Players.Add(p22);
             //t2.Players.Add(p23);
+            context.UserFavPlayers.AddOrUpdate(user1, user2, user3, user4, user5);
             context.Teams.AddOrUpdate(t=>t.Id,t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12);
             context.Coaches.AddOrUpdate(c => c.Name, c1, c2, c3);
             context.Players.AddOrUpdate(t => t.Name, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23);
