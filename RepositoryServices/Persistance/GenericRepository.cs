@@ -52,7 +52,7 @@ namespace RepositoryServices.Persistance
 
         public void Save()
         {
-            db.SaveChanges();
+            db.SaveChanges();            
         }
 
         public IEnumerable<T> Find(Expression<Func<T,bool>> predicate)
