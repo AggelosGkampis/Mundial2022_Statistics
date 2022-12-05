@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @*BEGIN OF MetaHEADER*@
+    @Html.Partial("~/Areas/Customer/Views/Shared/Components/_MetaHeader.cshtml")
+    @*END OF MetaHEADER*@
+</head>
+
+<body>
+
+    @*BEGIN OF HEADER*@
+    @Html.Partial("~/Areas/Customer/Views/Shared/Components/_Header.cshtml")
+    @*END OF HEADER*@
+
+    @*Start of Body*@
+    @RenderBody()
+    @*End of Body*@
+
+    @*BEGIN OF FOOTER*@
+    @Html.Partial("~/Areas/Customer/Views/Shared/Components/_Footer.cshtml")
+    @*END OF FOOTER*@
+
+    @*BEGIN OF Javascript*@
+    @Html.Partial("~/Areas/Customer/Views/Shared/Components/_JSLibraries.cshtml")
+    @*END OF Javascript*@
+
+</body>
+</html>
