@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace DAL.Initializers
 {
-    internal class MockUpDbInitializer :  DropCreateDatabaseAlways<ApplicationDbContext> //CreateDatabaseIfNotExists<ApplicationDbContext>
+    internal class MockUpDbInitializer :   CreateDatabaseIfNotExists<ApplicationDbContext> //DropCreateDatabaseAlways<ApplicationDbContext>
     {
         protected override void Seed(ApplicationDbContext context)
         {

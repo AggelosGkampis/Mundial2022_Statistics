@@ -16,7 +16,7 @@ namespace Experiments
     {
         static void Main(string[] args)
         {
-            ApplicationDbContext db = new ApplicationDbContext();
+            DAL.ApplicationDbContext db = new DAL.ApplicationDbContext();
 
             var teams = db.Teams.ToList()
                   .Select(x => x);
