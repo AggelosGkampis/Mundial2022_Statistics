@@ -17,7 +17,11 @@ namespace Entities
 
         public string PhotoUrl { get; set; }
         [Range(0,28)]
-        public int SquadSize { get; set; }  
+        public int SquadSize { get; set; }
+
+        public int TimesWonWorldCup { get; set; }
+
+        public int GoalsScored { get; set; }
 
         // Navigation Properties
 

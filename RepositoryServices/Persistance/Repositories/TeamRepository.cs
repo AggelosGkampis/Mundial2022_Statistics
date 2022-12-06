@@ -18,6 +18,16 @@ namespace RepositoryServices.Persistance.Repositories
            
         }
 
+        public IEnumerable<Team> GetBestTeams()
+        {
+            return table.OrderByDescending(x => x.Rating).Take(5).ToList();
+        }
+
+        public IEnumerable<Team> GetMostGoalsScored()
+        {
+            return table.OrderByDescending(x => x.GoalsScored).Take(5).ToList();
+        }
+
         public IEnumerable<Team> GetTeamsOrderByAscending()
         {
             return table.OrderBy(x => x.Name).ToList();
@@ -27,5 +37,11 @@ namespace RepositoryServices.Persistance.Repositories
         {
             return table.OrderByDescending(x => x.Name).ToList();
         }
+
+        public IEnumerable<Team> GetTopWinners(int count)
+        {
+            return table.OrderByDescending(x => x.TimesWonWorldCup).Take(count).ToList();
+        }
+
     }
 }

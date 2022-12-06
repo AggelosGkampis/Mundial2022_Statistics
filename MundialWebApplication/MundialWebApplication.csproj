@@ -524,9 +524,13 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Customer\Controllers\CoachController.cs" />
     <Compile Include="Areas\Customer\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Customer\Controllers\PlayerController.cs" />
     <Compile Include="Areas\Customer\Controllers\TeamController.cs" />
     <Compile Include="Areas\Customer\CustomerAreaRegistration.cs" />
+    <Compile Include="Areas\Customer\ViewModels\DisplayTeamCardsViewModel.cs" />
+    <Compile Include="Areas\Customer\ViewModels\TeamIndexViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -705,6 +709,11 @@
     <Content Include="Areas\Customer\Views\Shared\Components\_Footer.cshtml" />
     <Content Include="Areas\Customer\Views\Shared\Components\_JSLibraries.cshtml" />
     <Content Include="Areas\Customer\Views\Shared\Components\_MetaHeader.cshtml" />
+    <Content Include="Areas\Customer\Views\Coach\Index.cshtml" />
+    <Content Include="Areas\Customer\Views\Coach\Details.cshtml" />
+    <Content Include="Areas\Customer\Views\Player\Index.cshtml" />
+    <Content Include="Areas\Customer\Views\Player\Details.cshtml" />
+    <Content Include="Areas\Customer\Views\Team\DisplayTeamCards.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

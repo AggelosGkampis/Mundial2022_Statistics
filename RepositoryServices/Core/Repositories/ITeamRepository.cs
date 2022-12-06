@@ -12,5 +12,11 @@ namespace RepositoryServices.Core.Repositories
         IEnumerable<Team> GetTeamsOrderByAscending();
 
         IEnumerable<Team> GetTeamsOrderByDescending();
+
+        IEnumerable<Team> GetBestTeams();
+
+        IEnumerable<Team> GetTopWinners(int count);
+
+        IEnumerable<Team> GetMostGoalsScored();
     }
 }

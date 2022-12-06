@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace DAL.Initializers
 {
-    internal class MockUpDbInitializer :   CreateDatabaseIfNotExists<ApplicationDbContext> //DropCreateDatabaseAlways<ApplicationDbContext>
+    internal class MockUpDbInitializer : DropCreateDatabaseAlways<ApplicationDbContext> //CreateDatabaseIfNotExists<ApplicationDbContext> 
     {
         protected override void Seed(ApplicationDbContext context)
         {
@@ -55,6 +55,8 @@ namespace DAL.Initializers
                 Name = "England",
                 Rating = 9.5,
                 SquadSize = 26,
+                TimesWonWorldCup = 1,
+                GoalsScored = 91,
                 PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/189.png?lm=1520611569"
             };
             t1.Players = new List<Player>() { p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11 };            
@@ -63,6 +65,8 @@ namespace DAL.Initializers
                 Name = "Brazil",
                 Rating = 9.5,
                 SquadSize = 26,
+                TimesWonWorldCup = 5,
+                GoalsScored = 229,
                 PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/26.png?lm=1520611569"
             };
             t2.Players = new List<Player>() { p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23 };
@@ -71,6 +75,8 @@ namespace DAL.Initializers
                 Name = "France",
                 Rating = 9.5,
                 SquadSize = 25,
+                TimesWonWorldCup = 2,
+                GoalsScored = 120,
                 PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/50.png?lm=1520611569"
             };
             Team t4 = new Team()
@@ -78,6 +84,8 @@ namespace DAL.Initializers
                 Name = "Portugal",
                 Rating = 9,
                 SquadSize = 26,
+                TimesWonWorldCup = 0,
+                GoalsScored = 71,
                 PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/136.png?lm=1520611569"
             };
             Team t5 = new Team()
@@ -85,6 +93,8 @@ namespace DAL.Initializers
                 Name = "Germany",
                 Rating = 9,
                 SquadSize = 26,
+                TimesWonWorldCup = 4,
+                GoalsScored = 226,
                 PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/40.png?lm=1520612525"
             };
             Team t6 = new Team()
@@ -92,6 +102,8 @@ namespace DAL.Initializers
                 Name = "Spain",
                 Rating = 9,
                 SquadSize = 26,
+                TimesWonWorldCup = 1,
+                GoalsScored = 99,
                 PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/157.png?lm=1520611569"
             };
             Team t7 = new Team()
@@ -99,6 +111,8 @@ namespace DAL.Initializers
                 Name = "Argentina",
                 Rating = 9,
                 SquadSize = 26,
+                TimesWonWorldCup = 2,
+                GoalsScored = 137,
                 PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/9.png?lm=1520611569"
             };
             Team t8 = new Team()
@@ -106,6 +120,8 @@ namespace DAL.Initializers
                 Name = "Netherlands",
                 Rating = 8,
                 SquadSize = 26,
+                TimesWonWorldCup = 0,
+                GoalsScored = 86,
                 PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/122.png?lm=1520611569"
             };
             Team t9 = new Team()
@@ -113,6 +129,8 @@ namespace DAL.Initializers
                 Name = "Belgium",
                 Rating = 8,
                 SquadSize = 26,
+                TimesWonWorldCup = 0,
+                GoalsScored = 41,
                 PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/19.png?lm=1520611569"
             };
             Team t10 = new Team()
@@ -120,6 +138,8 @@ namespace DAL.Initializers
                 Name = "Uruguay",
                 Rating = 7.5,
                 SquadSize = 26,
+                TimesWonWorldCup = 2,
+                GoalsScored = 87,
                 PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/179.png?lm=1520611569"
             };
             Team t11 = new Team()
@@ -127,6 +147,8 @@ namespace DAL.Initializers
                 Name = "Croatia",
                 Rating = 7.5,
                 SquadSize = 26,
+                TimesWonWorldCup = 0,
+                GoalsScored = 46,
                 PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/37.png?lm=1520611569"
             };
             Team t12 = new Team()
@@ -134,6 +156,8 @@ namespace DAL.Initializers
                 Name = "Serbia",
                 Rating = 7.5,
                 SquadSize = 26,
+                TimesWonWorldCup = 0,
+                GoalsScored = 37,
                 PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/215.png?lm=1520611569"
             };
 
