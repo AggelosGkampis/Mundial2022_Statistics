@@ -10,7 +10,7 @@ namespace MundialWebApplication.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return Redirect("/customer/team/index");
         }
 
         public ActionResult About()
