@@ -57,7 +57,7 @@ namespace DAL.Initializers
                 SquadSize = 26,
                 TimesWonWorldCup = 1,
                 GoalsScored = 91,
-                PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/189.png?lm=1520611569"
+                PhotoUrl = "https://cdn.countryflags.com/thumbs/england/flag-square-250.png"
             };
             t1.Players = new List<Player>() { p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11 };            
             Team t2 = new Team()
@@ -67,7 +67,7 @@ namespace DAL.Initializers
                 SquadSize = 26,
                 TimesWonWorldCup = 5,
                 GoalsScored = 229,
-                PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/26.png?lm=1520611569"
+                PhotoUrl = "https://cdn.countryflags.com/thumbs/brazil/flag-square-250.png"
             };
             t2.Players = new List<Player>() { p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23 };
             Team t3 = new Team()
@@ -77,7 +77,7 @@ namespace DAL.Initializers
                 SquadSize = 25,
                 TimesWonWorldCup = 2,
                 GoalsScored = 120,
-                PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/50.png?lm=1520611569"
+                PhotoUrl = "https://cdn.countryflags.com/thumbs/france/flag-square-250.png"
             };
             Team t4 = new Team()
             {
@@ -86,7 +86,7 @@ namespace DAL.Initializers
                 SquadSize = 26,
                 TimesWonWorldCup = 0,
                 GoalsScored = 71,
-                PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/136.png?lm=1520611569"
+                PhotoUrl = "https://cdn.countryflags.com/thumbs/portugal/flag-square-250.png"
             };
             Team t5 = new Team()
             {
@@ -95,7 +95,7 @@ namespace DAL.Initializers
                 SquadSize = 26,
                 TimesWonWorldCup = 4,
                 GoalsScored = 226,
-                PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/40.png?lm=1520612525"
+                PhotoUrl = "https://cdn.countryflags.com/thumbs/germany/flag-square-250.png"
             };
             Team t6 = new Team()
             {
@@ -104,7 +104,7 @@ namespace DAL.Initializers
                 SquadSize = 26,
                 TimesWonWorldCup = 1,
                 GoalsScored = 99,
-                PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/157.png?lm=1520611569"
+                PhotoUrl = "https://cdn.countryflags.com/thumbs/spain/flag-square-250.png"
             };
             Team t7 = new Team()
             {
@@ -113,7 +113,7 @@ namespace DAL.Initializers
                 SquadSize = 26,
                 TimesWonWorldCup = 2,
                 GoalsScored = 137,
-                PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/9.png?lm=1520611569"
+                PhotoUrl = "https://cdn.countryflags.com/thumbs/argentina/flag-square-250.png"
             };
             Team t8 = new Team()
             {
@@ -122,7 +122,7 @@ namespace DAL.Initializers
                 SquadSize = 26,
                 TimesWonWorldCup = 0,
                 GoalsScored = 86,
-                PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/122.png?lm=1520611569"
+                PhotoUrl = "https://cdn.countryflags.com/thumbs/netherlands/flag-square-250.png"
             };
             Team t9 = new Team()
             {
@@ -131,7 +131,7 @@ namespace DAL.Initializers
                 SquadSize = 26,
                 TimesWonWorldCup = 0,
                 GoalsScored = 41,
-                PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/19.png?lm=1520611569"
+                PhotoUrl = "https://cdn.countryflags.com/thumbs/belgium/flag-square-250.png"
             };
             Team t10 = new Team()
             {
@@ -140,7 +140,7 @@ namespace DAL.Initializers
                 SquadSize = 26,
                 TimesWonWorldCup = 2,
                 GoalsScored = 87,
-                PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/179.png?lm=1520611569"
+                PhotoUrl = "https://cdn.countryflags.com/thumbs/uruguay/flag-square-250.png"
             };
             Team t11 = new Team()
             {
@@ -149,7 +149,7 @@ namespace DAL.Initializers
                 SquadSize = 26,
                 TimesWonWorldCup = 0,
                 GoalsScored = 46,
-                PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/37.png?lm=1520611569"
+                PhotoUrl = "https://cdn.countryflags.com/thumbs/croatia/flag-square-250.png"
             };
             Team t12 = new Team()
             {
@@ -158,7 +158,7 @@ namespace DAL.Initializers
                 SquadSize = 26,
                 TimesWonWorldCup = 0,
                 GoalsScored = 37,
-                PhotoUrl = "https://tmssl.akamaized.net/images/flagge/tiny/215.png?lm=1520611569"
+                PhotoUrl = "https://cdn.countryflags.com/thumbs/serbia/flag-square-250.png"
             };
 
 
