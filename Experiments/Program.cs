@@ -20,13 +20,21 @@ namespace Experiments
 
             var teams = db.Teams.ToList()
                   .Select(x => x);
+            var players = db.Players.ToList()
+                  .Select(x => x);
 
             foreach (var item in teams)
             {
                 Console.WriteLine(item.Name);
             }
 
+            Console.WriteLine("---------------------------");
 
+            foreach (var item2 in players)
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine(item2.Name);              
+            }
 
 
 

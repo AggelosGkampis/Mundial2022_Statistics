@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace DAL.Initializers
 {
-    internal class MockUpDbInitializer : DropCreateDatabaseAlways<ApplicationDbContext> //CreateDatabaseIfNotExists<ApplicationDbContext> 
+    internal class MockUpDbInitializer : DropCreateDatabaseAlways<ApplicationDbContext> //CreateDatabaseIfNotExists<ApplicationDbContext>
     {
         protected override void Seed(ApplicationDbContext context)
         {
@@ -18,31 +18,31 @@ namespace DAL.Initializers
 
             // England
 
-            Player p1 = new Player() { Name = "Phil Foden", Position = Position.CM, BirthDate = new DateTime(2000, 05, 28), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/406635-1668524492.jpg?lm=1",};
-            Player p2 = new Player() { Name = "Jude Bellingham", Position = Position.CM, BirthDate = new DateTime(2003, 06, 29), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/581678-1661412719.jpg?lm=1" };
-            Player p3 = new Player() { Name = "Harry Kane", Position = Position.CF, BirthDate = new DateTime(1993, 07, 28), IsCaptain = true, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/132098-1623778520.jpg?lm=1" };
-            Player p4 = new Player() { Name = "Bukayo Saka", Position = Position.RM, BirthDate = new DateTime(2001, 09, 05), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/433177-1665513395.jpg?lm=1" };
-            Player p5 = new Player() { Name = "Declan Rice", Position = Position.DM, BirthDate = new DateTime(1999, 01, 14), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/357662-1624883831.jpg?lm=1" };
-            Player p6 = new Player() { Name = "Mason Mount", Position = Position.AM, BirthDate = new DateTime(1993, 01, 10), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/346483-1642175298.jpg?lm=1" };
-            Player p7 = new Player() { Name = "Raheem Sterling", Position = Position.LW, BirthDate = new DateTime(1994, 12, 08), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/134425-1577051521.jpg?lm=1" };
-            Player p8 = new Player() { Name = "Jack Grealish", Position = Position.LW, BirthDate = new DateTime(1995, 09, 10), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/203460-1581417066.jpg?lm=1" };
-            Player p9 = new Player() { Name = "Alexander-Arnold", Position = Position.RB, BirthDate = new DateTime(1998, 10, 07), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/314353-1662621037.jpg?lm=1" };
-            Player p10 = new Player() { Name = "James Maddison", Position = Position.AM, BirthDate = new DateTime(1996, 11, 23), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/294057-1638811548.jpg?lm=1" };
-            Player p11 = new Player() { Name = "Ben White", Position = Position.CB, BirthDate = new DateTime(1997, 10, 08), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/335721-1668091170.jpg?lm=1" };
+            Player p1 = new Player() { Name = "Phil Foden", Position = Position.CM, BirthDate = new DateTime(2000, 05, 28),Overall= 90, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/406635-1668524492.jpg?lm=1",};
+            Player p2 = new Player() { Name = "Jude Bellingham", Position = Position.CM, BirthDate = new DateTime(2003, 06, 29),Overall = 86, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/581678-1661412719.jpg?lm=1" };
+            Player p3 = new Player() { Name = "Harry Kane", Position = Position.CF, BirthDate = new DateTime(1993, 07, 28), Overall = 92, IsCaptain = true, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/132098-1623778520.jpg?lm=1" };
+            Player p4 = new Player() { Name = "Bukayo Saka", Position = Position.RM, BirthDate = new DateTime(2001, 09, 05),Overall = 80, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/433177-1665513395.jpg?lm=1" };
+            Player p5 = new Player() { Name = "Declan Rice", Position = Position.DM, BirthDate = new DateTime(1999, 01, 14),Overall= 79, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/357662-1624883831.jpg?lm=1" };
+            Player p6 = new Player() { Name = "Mason Mount", Position = Position.AM, BirthDate = new DateTime(1993, 01, 10),Overall= 81, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/346483-1642175298.jpg?lm=1" };
+            Player p7 = new Player() { Name = "Raheem Sterling", Position = Position.LW, BirthDate = new DateTime(1994, 12, 08), Overall = 90, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/134425-1577051521.jpg?lm=1" };
+            Player p8 = new Player() { Name = "Jack Grealish", Position = Position.LW, BirthDate = new DateTime(1995, 09, 10), Overall = 83, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/203460-1581417066.jpg?lm=1" };
+            Player p9 = new Player() { Name = "Alexander-Arnold", Position = Position.RB, BirthDate = new DateTime(1998, 10, 07), Overall = 85, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/314353-1662621037.jpg?lm=1" };
+            Player p10 = new Player() { Name = "James Maddison", Position = Position.AM, BirthDate = new DateTime(1996, 11, 23), Overall = 78, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/294057-1638811548.jpg?lm=1" };
+            Player p11 = new Player() { Name = "Ben White", Position = Position.CB, BirthDate = new DateTime(1997, 10, 08), Overall = 79, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/335721-1668091170.jpg?lm=1" };
 
             // Brazil
-            Player p12 = new Player() { Name = "Vinicius Junior", Position = Position.LW, BirthDate = new DateTime(2000, 07, 12), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/371998-1664869583.jpg?lm=1" };
-            Player p13 = new Player() { Name = "Rodrygo", Position = Position.RW, BirthDate = new DateTime(2001, 01, 09), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/412363-1653297541.jpg?lm=1" };
-            Player p14 = new Player() { Name = "Neymar", Position = Position.LW, BirthDate = new DateTime(1992, 02, 05), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/68290-1632687616.jpg?lm=1" };
-            Player p15 = new Player() { Name = "Gabriel Jesus", Position = Position.CF, BirthDate = new DateTime(1997, 04, 03), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/363205-1533284263.jpg?lm=1" };
-            Player p16 = new Player() { Name = "Antony", Position = Position.RW, BirthDate = new DateTime(2000, 02, 24), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/602105-1661861635.jpg?lm=1" };
-            Player p17 = new Player() { Name = "Marquinhos", Position = Position.CB, BirthDate = new DateTime(1994, 05, 14), IsCaptain = true, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/181767-1639581124.jpg?lm=1" };
-            Player p18 = new Player() { Name = "Eder Militao", Position = Position.CB, BirthDate = new DateTime(1998, 01, 18), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/401530-1568189259.jpg?lm=1" };
-            Player p19 = new Player() { Name = "Bruno Guimaraes", Position = Position.DM, BirthDate = new DateTime(1997, 11, 16), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/520624-1668522672.jpg?lm=1" };
-            Player p20 = new Player() { Name = "Gabriel Martinelli", Position = Position.LW, BirthDate = new DateTime(2001, 01, 18), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/655488-1665499061.jpg?lm=1" };
-            Player p21 = new Player() { Name = "Fabinho", Position = Position.DM, BirthDate = new DateTime(1993, 10, 23), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/225693-1580133493.jpg?lm=1" };
-            Player p22 = new Player() { Name = "Casemiro", Position = Position.DM, BirthDate = new DateTime(1992, 02, 23), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/16306-1661426172.jpg?lm=1" };
-            Player p23 = new Player() { Name = "Alisson", Position = Position.GK, BirthDate = new DateTime(1992, 10, 02), IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/105470-1668522221.jpg?lm=1" };
+            Player p12 = new Player() { Name = "Vinicius Junior", Position = Position.LW, BirthDate = new DateTime(2000, 07, 12), Overall = 89, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/371998-1664869583.jpg?lm=1" };
+            Player p13 = new Player() { Name = "Rodrygo", Position = Position.RW, BirthDate = new DateTime(2001, 01, 09), Overall = 87, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/412363-1653297541.jpg?lm=1" };
+            Player p14 = new Player() { Name = "Neymar", Position = Position.LW, BirthDate = new DateTime(1992, 02, 05), Overall = 95, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/68290-1632687616.jpg?lm=1" };
+            Player p15 = new Player() { Name = "Gabriel Jesus", Position = Position.CF, BirthDate = new DateTime(1997, 04, 03), Overall = 91, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/363205-1533284263.jpg?lm=1" };
+            Player p16 = new Player() { Name = "Antony", Position = Position.RW, BirthDate = new DateTime(2000, 02, 24), Overall = 89, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/602105-1661861635.jpg?lm=1" };
+            Player p17 = new Player() { Name = "Marquinhos", Position = Position.CB, BirthDate = new DateTime(1994, 05, 14), Overall = 86, IsCaptain = true, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/181767-1639581124.jpg?lm=1" };
+            Player p18 = new Player() { Name = "Eder Militao", Position = Position.CB, BirthDate = new DateTime(1998, 01, 18), Overall = 83, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/401530-1568189259.jpg?lm=1" };
+            Player p19 = new Player() { Name = "Bruno Guimaraes", Position = Position.DM, BirthDate = new DateTime(1997, 11, 16), Overall = 80, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/520624-1668522672.jpg?lm=1" };
+            Player p20 = new Player() { Name = "Gabriel Martinelli", Position = Position.LW, BirthDate = new DateTime(2001, 01, 18), Overall = 81, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/655488-1665499061.jpg?lm=1" };
+            Player p21 = new Player() { Name = "Fabinho", Position = Position.DM, BirthDate = new DateTime(1993, 10, 23), Overall = 80, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/225693-1580133493.jpg?lm=1" };
+            Player p22 = new Player() { Name = "Casemiro", Position = Position.DM, BirthDate = new DateTime(1992, 02, 23), Overall = 83, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/16306-1661426172.jpg?lm=1" };
+            Player p23 = new Player() { Name = "Alisson", Position = Position.GK, BirthDate = new DateTime(1992, 10, 02), Overall = 87, IsCaptain = false, ImageUrl = "https://img.a.transfermarkt.technology/portrait/header/105470-1668522221.jpg?lm=1" };
 
 
             #endregion
@@ -197,77 +197,11 @@ namespace DAL.Initializers
 
             // Teams With Players
 
-            //t1.Players.Add(p1);
-            //t1.Players.Add(p2);
-            //t1.Players.Add(p3);
-            //t1.Players.Add(p4);
-            //t1.Players.Add(p5);
-            //t1.Players.Add(p6);
-            //t1.Players.Add(p7);
-            //t1.Players.Add(p8);
-            //t1.Players.Add(p9);
-            //t1.Players.Add(p10);
-            //t1.Players.Add(p11);
-            //t2.Players.Add(p12);
-            //t2.Players.Add(p13);
-            //t2.Players.Add(p14);
-            //t2.Players.Add(p15);
-            //t2.Players.Add(p16);
-            //t2.Players.Add(p17);
-            //t2.Players.Add(p18);
-            //t2.Players.Add(p19);
-            //t2.Players.Add(p20);
-            //t2.Players.Add(p21);
-            //t2.Players.Add(p22);
-            //t2.Players.Add(p23);
             context.UserFavPlayers.AddOrUpdate(user1, user2, user3, user4, user5);
             context.Teams.AddOrUpdate(t=>t.Id,t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12);
             context.Coaches.AddOrUpdate(c => c.Name, c1, c2, c3);
             context.Players.AddOrUpdate(t => t.Name, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23);
             context.SaveChanges();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            //t1.Players = new List<Player>() { p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11 };
-            //p1.Team = t1;
-            //p2.Team = t1;
-            //p3.Team = t1;
-            //p4.Team = t1;
-            //p5.Team = t1;
-            //p6.Team = t1;
-            //p7.Team = t1;
-            //p8.Team = t1;
-            //p9.Team = t1;
-            //p10.Team = t1;
-            //p11.Team = t1;
-
-            //t2.Players = new List<Player>() { p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23 };
-            //p12.Team = t2;
-            //p13.Team = t2;
-            //p14.Team = t2;
-            //p15.Team = t2;
-            //p16.Team = t2;
-            //p17.Team = t2;
-            //p18.Team = t2;
-            //p19.Team = t2;
-            //p20.Team = t2;
-            //p21.Team = t2;
-            //p22.Team = t2;
-            //p23.Team = t2;
-
-
-            //context.SaveChanges();
 
             #endregion
 
