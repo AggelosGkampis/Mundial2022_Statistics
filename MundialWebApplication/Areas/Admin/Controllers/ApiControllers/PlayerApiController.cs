@@ -9,17 +9,13 @@ using System.Web.Http;
 using System.Web.Mvc;
 using HttpGetAttribute = System.Web.Http.HttpGetAttribute;
 using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
+using HttpPutAttribute = System.Web.Http.HttpPutAttribute;
 
 namespace MundialWebApplication.Areas.Admin.Controllers.ApiControllers
 {
-    public class PlayerApiController : Controller
+    public class PlayerApiController : BaseClassController
     {
-        DAL.ApplicationDbContext db = new DAL.ApplicationDbContext();
-        UnitOfWork unit;
-        public PlayerApiController()
-        {
-            unit = new UnitOfWork(db);  
-        }
+       
 
         [HttpGet]
         public ActionResult GetNames()
@@ -54,15 +50,30 @@ namespace MundialWebApplication.Areas.Admin.Controllers.ApiControllers
             return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
         }
 
-
-        protected override void Dispose(bool disposing)
+        [HttpPut]
+        public ActionResult EditPlayer ( int? id,Player player)
         {
-            if (disposing)
+            if (id is null)
             {
-                unit.Dispose();  
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            base.Dispose(disposing);    
+            var pl = unit.Players.GetById(id);
+            
+            if (pl is null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
+
+            // Mapping 
+
+            pl.Name= player.Name;
+            pl.Overall= player.Overall;
+            unit.Players.Update(pl);
+            unit.Complete();
+            return  Json(pl, JsonRequestBehavior.AllowGet);
         }
+
+     
     }
 }
