@@ -11,8 +11,7 @@ namespace RepositoryServices.Core
     {
         ITeamRepository Teams { get; }
         IPlayerRepository Players { get; }
-        ICoachRepository Coaches { get; }
-        IPersonRepository Persons { get; } 
+        ICoachRepository Coaches { get; }     
         int Complete();
     }
 }

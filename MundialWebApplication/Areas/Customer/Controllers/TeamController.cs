@@ -1,4 +1,5 @@
 ﻿using Entities;
+using MundialWebApplication.Areas.Admin.Controllers.ApiControllers;
 using MundialWebApplication.Areas.Customer.ViewModels;
 using RepositoryServices.Persistance;
 using System;
@@ -9,17 +10,12 @@ using System.Web.Mvc;
 
 namespace MundialWebApplication.Areas.Customer.Controllers
 {
-    public class TeamController : Controller
+    public class TeamController :  BaseClassController
     {
-        DAL.ApplicationDbContext db = new DAL.ApplicationDbContext();
-        UnitOfWork unit;
-
         public TeamController()
         {
-            unit = new UnitOfWork(db);
+
         }
-
-
         // GET: Customer/Team
         public ActionResult Index()
         {
@@ -50,14 +46,6 @@ namespace MundialWebApplication.Areas.Customer.Controllers
             return View(vm);
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                unit.Dispose();
-            }
-
-            base.Dispose(disposing);
-        }
+      
     }
 }

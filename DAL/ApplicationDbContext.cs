@@ -15,7 +15,7 @@ namespace DAL
         public ApplicationDbContext() : base("ConnectionStringMundialDB")
         {
             Database.SetInitializer<ApplicationDbContext>(new MockUpDbInitializer());
-            Database.Initialize(false);
+            Database.Initialize(true);
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -28,7 +28,7 @@ namespace DAL
         public DbSet<Team> Teams { get; set; }
         public DbSet<Player> Players { get; set; }
         public DbSet<Coach> Coaches { get; set; }
-        public DbSet<Person> Persons { get; set; }
+    
 
         public DbSet<UserFavPlayers> UserFavPlayers { get; set; }    
     }

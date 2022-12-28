@@ -205,7 +205,7 @@ namespace DAL.Initializers
 
             #endregion
 
-            Person person1 = new Person() { Id = 1, Name = "Aggelos", Country = "Greece" };
+            
 
             base.Seed(context);
         }

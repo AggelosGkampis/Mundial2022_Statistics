@@ -51,7 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Repositories\IPersonRepository.cs" />
     <Compile Include="Persistance\Repositories\CoachRepository.cs" />
     <Compile Include="Core\IGenericRepository.cs" />
     <Compile Include="Core\IUnitOfWork.cs" />
@@ -59,7 +58,6 @@
     <Compile Include="Core\Repositories\IPlayerRepository.cs" />
     <Compile Include="Core\Repositories\ITeamRepository.cs" />
     <Compile Include="Persistance\GenericRepository.cs" />
-    <Compile Include="Persistance\Repositories\PersonRepository.cs" />
     <Compile Include="Persistance\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Persistance\Repositories\PlayerRepository.cs" />

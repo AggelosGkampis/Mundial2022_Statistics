@@ -20,7 +20,6 @@ namespace RepositoryServices.Persistance
             Teams = new TeamRepository(context);
             Players = new PlayerRepository(context);
             Coaches = new CoachRepository(context);
-            Persons = new PersonRepository(context);
         }
 
         public ITeamRepository Teams { get; private set; }
@@ -28,8 +27,7 @@ namespace RepositoryServices.Persistance
         public IPlayerRepository Players { get; private set; }
 
         public ICoachRepository Coaches { get; private set; }
-        public IPersonRepository Persons { get; private set; }
-
+      
         public int Complete()
         {
             return context.SaveChanges();
