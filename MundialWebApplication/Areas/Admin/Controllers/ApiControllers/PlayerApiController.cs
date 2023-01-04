@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Mvc;
+using HttpDeleteAttribute = System.Web.Http.HttpDeleteAttribute;
 using HttpGetAttribute = System.Web.Http.HttpGetAttribute;
 using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
 
@@ -52,6 +53,27 @@ namespace MundialWebApplication.Areas.Admin.Controllers.ApiControllers
             }
 
             return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        }
+
+        [HttpDelete]
+
+        public ActionResult DeletePlayerById(int? id)
+        {
+            if (id is null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var player = unit.Players.GetById(id);
+
+            if (player is null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
+
+            unit.Players.Delete(id);
+            unit.Complete();
+            return Json(player, JsonRequestBehavior.AllowGet);
         }
 
 

@@ -15,7 +15,7 @@ namespace DAL
         public ApplicationDbContext() : base("ConnectionStringMundialDB")
         {
             Database.SetInitializer<ApplicationDbContext>(new MockUpDbInitializer());
-            Database.Initialize(true);
+            Database.Initialize(false);
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
