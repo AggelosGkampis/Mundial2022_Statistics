@@ -10,17 +10,13 @@ using System.Web.Mvc;
 using HttpDeleteAttribute = System.Web.Http.HttpDeleteAttribute;
 using HttpGetAttribute = System.Web.Http.HttpGetAttribute;
 using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
+using HttpPutAttribute = System.Web.Http.HttpPutAttribute;
 
 namespace MundialWebApplication.Areas.Admin.Controllers.ApiControllers
 {
-    public class PlayerApiController : Controller
+    public class PlayerApiController : BaseClassController
     {
-        DAL.ApplicationDbContext db = new DAL.ApplicationDbContext();
-        UnitOfWork unit;
-        public PlayerApiController()
-        {
-            unit = new UnitOfWork(db);  
-        }
+       
 
         [HttpGet]
         public ActionResult GetNames()
@@ -55,36 +51,23 @@ namespace MundialWebApplication.Areas.Admin.Controllers.ApiControllers
             return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
         }
 
-        [HttpDelete]
 
-        public ActionResult DeletePlayerById(int? id)
-        {
-            if (id is null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
-            var player = unit.Players.GetById(id);
-
-            if (player is null)
+            var pl = unit.Players.GetById(id);
+            
+            if (pl is null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.NotFound);
             }
 
-            unit.Players.Delete(id);
+            // Mapping 
+
+            pl.Name= player.Name;
+            pl.Overall= player.Overall;
+            unit.Players.Update(pl);
             unit.Complete();
-            return Json(player, JsonRequestBehavior.AllowGet);
+            return  Json(pl, JsonRequestBehavior.AllowGet);
         }
 
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                unit.Dispose();  
-            }
-
-            base.Dispose(disposing);    
-        }
+     
     }
 }

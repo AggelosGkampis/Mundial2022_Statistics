@@ -28,6 +28,7 @@ namespace DAL
         public DbSet<Team> Teams { get; set; }
         public DbSet<Player> Players { get; set; }
         public DbSet<Coach> Coaches { get; set; }
+        public DbSet<Person> Persons { get; set; }
 
         public DbSet<UserFavPlayers> UserFavPlayers { get; set; }    
     }

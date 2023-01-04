@@ -523,8 +523,11 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ApiControllers\BaseClassController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ApiControllers\PersonApiController.cs" />
     <Compile Include="Areas\Admin\Controllers\ApiControllers\PlayerApiController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NobelController.cs" />
     <Compile Include="Areas\Admin\Controllers\TeamApiController.cs" />
     <Compile Include="Areas\Admin\Controllers\TeamController.cs" />
     <Compile Include="Areas\Customer\Controllers\CoachController.cs" />
@@ -719,6 +722,7 @@
     <Content Include="Areas\Customer\Views\Team\DisplayTeamCards.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Areas\Admin\Views\Team\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Nobel\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
