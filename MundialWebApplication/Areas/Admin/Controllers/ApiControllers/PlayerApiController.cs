@@ -52,21 +52,21 @@ namespace MundialWebApplication.Areas.Admin.Controllers.ApiControllers
         }
 
 
-            var pl = unit.Players.GetById(id);
+            //var pl = unit.Players.GetById(id);
             
-            if (pl is null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
-            }
+            //if (pl is null)
+            //{
+            //    return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            //}
 
-            // Mapping 
+            //// Mapping 
 
-            pl.Name= player.Name;
-            pl.Overall= player.Overall;
-            unit.Players.Update(pl);
-            unit.Complete();
-            return  Json(pl, JsonRequestBehavior.AllowGet);
-        }
+            //pl.Name= player.Name;
+            //pl.Overall= player.Overall;
+            //unit.Players.Update(pl);
+            //unit.Complete();
+            //return  Json(pl, JsonRequestBehavior.AllowGet);
+        
 
      
     }
